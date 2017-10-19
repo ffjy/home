@@ -18,7 +18,9 @@ var gulp = require('gulp'),
 
     browserSync = require('browser-sync').create(),
 
-    plumber = require('gulp-plumber');
+    plumber = require('gulp-plumber'),
+
+    watch = require('gulp-watch');
 
 
 //设置各种输入输出文件夹的位置;
@@ -51,6 +53,8 @@ var srcScript = './src/js/**/*.js',
 
 gulp.task('script', function() {
 
+return watch(srcScript, function() {
+
     gulp.src(srcScript)
 
         .pipe(plumber())
@@ -61,12 +65,16 @@ gulp.task('script', function() {
 
 });
 
+});
+
 
 //处理CSS文件:压缩,然后换个名输出;
 
 //命令行使用gulp css启用此任务;
 
 gulp.task('css', function() {
+
+return watch(srcCss, function() {
 
     gulp.src(srcCss)
 
@@ -75,6 +83,8 @@ gulp.task('css', function() {
         .pipe(minifyCSS())
 
         .pipe(gulp.dest(dstCSS));
+
+})
 
 });
 
@@ -85,7 +95,9 @@ gulp.task('css', function() {
 
 gulp.task('sass', function() {
 
-    gulp.src(srcSass)
+return watch(srcSass, function () {
+
+    gulp.src(srcSass)
 
         .pipe(plumber())
 
@@ -96,6 +108,8 @@ gulp.task('sass', function() {
         }))
 
         .pipe(gulp.dest(dstSass));
+
+});
 
 });
 
@@ -130,6 +144,8 @@ gulp.task('imgmin', function() {
 
         });
 
+return watch(srcImage, function() {
+
     gulp.src(srcImage)
 
         .pipe(plumber())
@@ -144,6 +160,8 @@ gulp.task('imgmin', function() {
 
 });
 
+});
+
 
 //把所有html页面扔进dist文件夹(不作处理);
 
@@ -151,11 +169,15 @@ gulp.task('imgmin', function() {
 
 gulp.task('html', function() {
 
+return watch([srcHtml, srcHtmlTemplate], function() {
+
     gulp.src([srcHtml, srcHtmlTemplate])
 
         .pipe(plumber())
 
         .pipe(gulp.dest(dstHtml));
+
+});
 
 });
 
@@ -181,6 +203,7 @@ gulp.task('server', function() {
 
 gulp.task('auto', function() {
 
+        /*
     gulp.watch(srcScript, ['script']);
 
     gulp.watch(srcCss, ['css']);
@@ -190,6 +213,7 @@ gulp.task('auto', function() {
     gulp.watch(srcImage, ['imgmin']);
 
     gulp.watch(srcHtml, ['html']);
+*/
 
     gulp.watch('./dist/**/*.*').on('change', browserSync.reload);
 
