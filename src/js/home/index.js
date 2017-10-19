@@ -1,5 +1,11 @@
 $(document).ready(function() {
-  var swiper = new Swiper('.swiper-container', {
-
+  var st = new Swiper('.st-container', {
+    slidesPerView: 'auto',
+    paginationClickable: true
+  })
+  var school = new Swiper('.school-container', {
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    initialSlide: 1
   })
 });

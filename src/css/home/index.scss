@@ -30,10 +30,11 @@ body {
       align-items: center;
       li {
         margin: 0 pxTorem(15px);
-        margin-top: pxTorem(2.2px);
+        margin-top: pxTorem(5px);
+        width: px2rem(56px);
         a {
           display: flex;
-          font-size: pxTorem(14px);
+          font-size: pxTorem(13px);
           color: #4E5358;
           flex-direction: column;
           align-items: center;
@@ -65,9 +66,11 @@ body {
         background-color: yellowgreen;
         margin: px2rem(10px) auto 0;
         position: relative;
+        border-radius: px2rem(4px);        
         img {
           width: px2rem(345px);
           height: px2rem(140px);
+          border-radius: px2rem(4px);      
         }
         a {
           width: px2rem(120px);
@@ -162,20 +165,307 @@ body {
       font-size: px2rem(17px);
       color: #2F3030;
     }
+    .swiper-slide {
+      margin-left: px2rem(10px);
+      width: px2rem(112px) !important;
+      .img {
+        width: px2rem(112px);
+        height: px2rem(155px);
+        position: relative;
+        background: greenyellow;
+        overflow: hidden;
+        margin-bottom: px2rem(4.5px);
+        border-radius: px2rem(4px);
+        img {
+          border-radius: px2rem(4px);
+          width: px2rem(112px);
+          height: px2rem(155px);
+        }
+      }
+      .name {
+        text-align: center;
+        color: #2F3030;
+        font-size: px2rem(14px);
+        line-height: px2rem(20px);
+      }
+    }
   }
   .ff-teacher {
-
+    width: px2rem(345px);
+    height: px2rem(240px);
+    background-color: #fff;
+    margin: px2rem(10px) auto 0;
+    border-radius: px2rem(4px);
+    overflow: hidden;
+    h2 {
+      margin: px2rem(10.5px) 0 px2rem(10.5px) px2rem(9px);
+      font-weight: normal;
+      font-size: px2rem(17px);
+      color: #2F3030;
+      display: flex;
+      align-items: center;
+      a {
+        color: #86888A;
+        flex: 1;
+        font-size: px2rem(14px);
+        text-align: right;
+        padding-right: px2rem(14px);
+      }
+    }
+    .swiper-slide {
+      margin-left: px2rem(10px);
+      width: px2rem(112px) !important;
+      .img {
+        width: px2rem(112px);
+        height: px2rem(155px);
+        position: relative;
+        background: greenyellow;
+        overflow: hidden;
+        margin-bottom: px2rem(4.5px);
+        border-radius: px2rem(4px); 
+        img {
+          width: px2rem(112px);
+          height: px2rem(155px);
+          border-radius: px2rem(4px);
+        }       
+        .label {
+          display: block;
+          position: absolute;
+          width: px2rem(60px);
+          background-color: #FADC17;
+          font-size: px2rem(12px);
+          color: #2F3030;
+          text-align: center;
+          height: px2rem(45px);
+          transform-origin: center;
+          transform:  rotate(-45deg);
+          left: -.65rem;
+          top: -.45rem;
+          line-height: px2rem(70px);
+        } 
+      }
+      .name {
+        text-align: center;
+        color: #2F3030;
+        font-size: px2rem(14px);
+        line-height: px2rem(20px);
+      }
+    }
   }
   .ff-school {
-
+    width: px2rem(345px);
+    height: px2rem(240px);
+    background-color: #fff;
+    margin: px2rem(10px) auto 0;
+    border-radius: px2rem(4px);
+    overflow: hidden;
+    h2 {
+      margin: px2rem(14.5px) 0 px2rem(14.5px) px2rem(9px);
+      font-weight: normal;
+      font-size: px2rem(17px);
+      color: #2F3030;
+      display: flex;
+      align-items: center;
+      a {
+        color: #86888A;
+        flex: 1;
+        font-size: px2rem(14px);
+        text-align: right;
+        padding-right: px2rem(14px);
+      }
+    }
+    .swiper-slide {
+      width: px2rem(275px) !important; 
+      margin-left: px2rem(5px);
+      margin-right: px2rem(5px);     
+      .img {
+        width: px2rem(275px);
+        height: px2rem(150px);
+        background: greenyellow;
+        border-radius: px2rem(4px);    
+        img {
+          width: px2rem(275px);
+          height: px2rem(150px);
+          border-radius: px2rem(4px);  
+        }
+      }
+      .name {
+        text-align: center;
+        color: #3F4040;
+        font-size: px2rem(14px);
+        line-height: px2rem(20px);
+        margin-top: px2rem(14px);
+      }
+      &.swiper-slide-active .img {
+        box-shadow: 0 px2rem(2px) px2rem(8px) rgba(0, 0, 0, .2);
+      }
+    }
   }
   .ff-student {
-
+    width: px2rem(345px);
+    height: px2rem(240px);
+    background-color: #fff;
+    margin: px2rem(10px) auto 0;
+    border-radius: px2rem(4px);
+    overflow: hidden;
+    h2 {
+      margin: px2rem(10.5px) 0 px2rem(10.5px) px2rem(9px);
+      font-weight: normal;
+      font-size: px2rem(17px);
+      color: #2F3030;
+      display: flex;
+      align-items: center;
+      a {
+        color: #86888A;
+        flex: 1;
+        font-size: px2rem(14px);
+        text-align: right;
+        padding-right: px2rem(14px);
+      }
+    }
+    .swiper-slide {
+      margin-left: px2rem(10px);
+      width: px2rem(112px) !important;
+      .img {
+        width: px2rem(112px);
+        height: px2rem(155px);
+        position: relative;
+        background: greenyellow;
+        overflow: hidden;
+        margin-bottom: px2rem(4.5px);
+        border-radius: px2rem(4px); 
+        img {
+          width: px2rem(112px);
+          height: px2rem(155px);
+          border-radius: px2rem(4px);
+        }       
+        .label {
+          display: block;
+          position: absolute;
+          width: px2rem(60px);
+          background-color: #FADC17;
+          font-size: px2rem(12px);
+          color: #2F3030;
+          text-align: center;
+          height: px2rem(45px);
+          transform-origin: center;
+          transform:  rotate(-45deg);
+          left: -.65rem;
+          top: -.45rem;
+          line-height: px2rem(70px);
+        } 
+      }
+      .name {
+        text-align: center;
+        color: #2F3030;
+        font-size: px2rem(14px);
+        line-height: px2rem(20px);
+      }
+    }
   }
   .ff-ads {
-
+    overflow: hidden;
+    .ad-why {
+      margin-top: px2rem(10px);
+      width: 100%;
+      background-color: #fff;
+      padding-bottom: px2rem(10px);
+      .item {
+        margin: 0 auto;
+        margin-bottom: px2rem(15px);
+        background-color: greenyellow;
+        width: px2rem(345px);
+        height: px2rem(365px);
+        box-shadow: 0 px2rem(2.5px) px2rem(4px) rgba(0, 0, 0, .11);
+        border-radius: px2rem(4px);
+      }
+    }
+    .ad-free {
+      margin-top: px2rem(10px);
+      background: #fff;
+      width: 100%;
+      padding-bottom: px2rem(10px);
+      .item {
+        margin: 0 auto;
+        margin-bottom: px2rem(15px);
+        width: px2rem(345px);
+        height: px2rem(146.5px);
+        box-shadow: 0 px2rem(2.5px) px2rem(4px) rgba(0, 0, 0, .11);
+        background-color: goldenrod;
+        border-radius: px2rem(4px);
+      }
+    }
   }
 }
 .footer {
+  margin-top: px2rem(10px);
+  font-size: px2rem(14px);
+  line-height: px2rem(20px);
+  color: #86888A;
+  text-align: center;
+}
 
+.navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: px2rem(52px); // 11
+  background-color: #fff;
+  z-index: 10;
+  display: flex;
+  .mask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    box-shadow: 0 px2rem(-2.5px) px2rem(12.5px) px2rem(2px) rgba(0, 0, 0, .1);
+    z-index: 11;
+  }
+  .center {
+    width: px2rem(63px);
+    height: px2rem(63px);
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    z-index: 9;
+    top: px2rem(-12px);
+    box-shadow: 0 px2rem(-2.5px) px2rem(12.5px) px2rem(2px) rgba(0, 0, 0, .1);
+  }
+  .right {
+    a:first-child {
+      margin-left: px2rem(27px) !important;
+    }
+  }
+  .left, .right {
+    display: flex;
+    position: relative;
+    z-index: 12;
+    flex: 1;
+    & > a {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      &:first-child {
+        margin-left: px2rem(23.5px);
+        margin-right: px2rem(47px);
+      }
+      .icon {
+        display: block;
+        width: px2rem(20px);
+        height: px2rem(20px);
+        background-color: #FADC17;
+        margin-bottom: px2rem(1.5px);
+      }
+      .name {
+        font-size: px2rem(14px);
+        line-height: px2rem(20px);
+        color: #2A2B2F;
+      }
+    }
+  }
 }
