@@ -1,6 +1,170 @@
 @import '../mixins';
 
+html, body {
+  background-color: #979797;
+}
+
 body {
-  height: 500px;
-  background: red;
+  padding-bottom: px2rem(63px);
+}
+
+.header {
+  width: pxTorem(375px);
+  height: pxTorem(390px);
+  background-color: rgba(20, 196, 169, 0.60);
+  .menu {
+    width: pxTorem(345px);
+    height: pxTorem(165px);
+    border-radius: pxTorem(4px);
+    position: relative;
+    top: pxTorem(335px);
+    background-color: #fff;
+    margin: 0 auto;
+    ul {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+      justify-content: center;
+      align-items: center;
+      li {
+        margin: 0 pxTorem(15px);
+        margin-top: pxTorem(2.2px);
+        a {
+          display: flex;
+          font-size: pxTorem(14px);
+          color: #4E5358;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          & > p {
+            line-height: pxTorem(20px);
+          }
+        }
+        .icon {
+          display: block;
+          width: pxTorem(39.6px);
+          height: pxTorem(39.6px); 
+          background: red;
+          margin-bottom: pxTorem(3.7px);
+        }
+      }
+    }
+  }
+}
+
+.main {
+  .banner {
+    margin-top: px2rem(110px);
+    ul {
+      overflow: hidden;
+      li {
+        width: px2rem(345px);
+        height: px2rem(140px);
+        background-color: yellowgreen;
+        margin: px2rem(10px) auto 0;
+        position: relative;
+        img {
+          width: px2rem(345px);
+          height: px2rem(140px);
+        }
+        a {
+          width: px2rem(120px);
+          height: px2rem(25px);
+          line-height: px2rem(25px);
+          text-align: center;
+          background-color: #FFE518;
+          border-radius: px2rem(4px);
+          display: block;
+          position: absolute;
+          bottom: px2rem(9px);
+          left: 50%;
+          transform: translateX(-50%);
+          color: #2F3030;
+          font-size: px2rem(14px);
+        }
+      }
+    }
+  }
+  .top-article {
+    width: px2rem(345px);
+    height: px2rem(220px);
+    margin: px2rem(10px) auto 0;
+    border-radius: px2rem(4px);
+    background-color: #fff;
+    padding-left: px2rem(11.5px);
+    box-sizing: border-box;
+    overflow: hidden;
+    h2 {
+      font-weight: normal;
+      font-size: px2rem(17px);
+      color: #2F3030;
+      margin-top: px2rem(15.5px);
+      line-height: px2rem(24px);
+      display: flex;
+      a {
+        flex: 1;
+        padding-right: px2rem(13px);
+        text-align: right;
+        font-size: px2rem(14px);
+        color: #86888A;
+      }
+    }
+    .articles {
+      margin-top: px2rem(9px);
+      a {
+        display: flex;
+        p {
+          margin-top: px2rem(8px);
+          width: px2rem(246.5px);
+          height: px2rem(44px);
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          line-height: px2rem(21px);
+          font-size: px2rem(14px);
+        }
+        .img-wrap {
+          width: 20px;
+          height: px2rem(51px);
+          background: red;
+          position: relative;
+          img {
+            width: px2rem(70px);
+            height: px2rem(44px);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+          }
+        }
+      }
+      li {
+        margin-bottom: px2rem(3px);
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .ff-score {
+
+  }
+  .ff-teacher {
+
+  }
+  .ff-school {
+
+  }
+  .ff-student {
+
+  }
+  .ff-ads {
+
+  }
+}
+.footer {
+
 }

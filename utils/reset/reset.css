@@ -46,3 +46,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* 周宇涛 reset style */
+a {
+	text-decoration: none;
+	color: inherit;
+}

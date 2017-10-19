@@ -16,7 +16,9 @@ var gulp = require('gulp'),
 
     imageminOptipng = require('imagemin-optipng'),
 
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+
+    plumber = require('gulp-plumber');
 
 
 //设置各种输入输出文件夹的位置;
@@ -51,6 +53,8 @@ gulp.task('script', function() {
 
     gulp.src(srcScript)
 
+        .pipe(plumber())
+
         .pipe(uglify())
 
         .pipe(gulp.dest(dstScript));
@@ -66,6 +70,8 @@ gulp.task('css', function() {
 
     gulp.src(srcCss)
 
+        .pipe(plumber())
+
         .pipe(minifyCSS())
 
         .pipe(gulp.dest(dstCSS));
@@ -80,6 +86,8 @@ gulp.task('css', function() {
 gulp.task('sass', function() {
 
     gulp.src(srcSass)
+
+        .pipe(plumber())
 
         .pipe(sass({
 
@@ -124,6 +132,8 @@ gulp.task('imgmin', function() {
 
     gulp.src(srcImage)
 
+        .pipe(plumber())
+
         .pipe(imagemin({
 
             use: [jpgmin, pngmin]
@@ -142,6 +152,8 @@ gulp.task('imgmin', function() {
 gulp.task('html', function() {
 
     gulp.src([srcHtml, srcHtmlTemplate])
+
+        .pipe(plumber())
 
         .pipe(gulp.dest(dstHtml));
 
