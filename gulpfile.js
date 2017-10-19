@@ -37,7 +37,8 @@ var srcScript = './src/js/*.js',
 
     dstImage = './dist/img',
 
-    srcHtml = './src/**/*.html',
+    srcHtml = './src/*.html',
+    srcHtmlTemplate = './src/template/**/*.html',
 
     dstHtml = './dist';
 
@@ -140,7 +141,7 @@ gulp.task('imgmin', function() {
 
 gulp.task('html', function() {
 
-    gulp.src(srcHtml)
+    gulp.src([srcHtml, srcHtmlTemplate])
 
         .pipe(gulp.dest(dstHtml));
 
