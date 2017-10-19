@@ -21,19 +21,19 @@ var gulp = require('gulp'),
 
 //设置各种输入输出文件夹的位置;
 
-var srcScript = './src/js/*.js',
+var srcScript = './src/js/**/*.js',
 
     dstScript = './dist/js',
 
-    srcCss = './src/css/*.css',
+    srcCss = './src/css/**/*.css',
 
     dstCSS = './dist/css',
 
-    srcSass = './src/css/*.scss',
+    srcSass = './src/css/**/*.scss',
 
     dstSass = './dist/css',
 
-    srcImage = './src/img/*.*',
+    srcImage = './src/img/**/*.*',
 
     dstImage = './dist/img',
 
