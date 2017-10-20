@@ -53,17 +53,15 @@ var srcScript = './src/js/**/*.js',
 
 gulp.task('script', function() {
 
-return watch(srcScript, function() {
-
     gulp.src(srcScript)
+
+        .pipe(watch(srcScript))
 
         .pipe(plumber())
 
         .pipe(uglify())
 
         .pipe(gulp.dest(dstScript));
-
-});
 
 });
 
@@ -74,17 +72,15 @@ return watch(srcScript, function() {
 
 gulp.task('css', function() {
 
-return watch(srcCss, function() {
-
     gulp.src(srcCss)
+
+        .pipe(watch(srcCss))
 
         .pipe(plumber())
 
         .pipe(minifyCSS())
 
         .pipe(gulp.dest(dstCSS));
-
-})
 
 });
 
@@ -95,9 +91,9 @@ return watch(srcCss, function() {
 
 gulp.task('sass', function() {
 
-return watch(srcSass, function () {
-
     gulp.src(srcSass)
+
+        .pipe(watch(srcSass))
 
         .pipe(plumber())
 
@@ -108,8 +104,6 @@ return watch(srcSass, function () {
         }))
 
         .pipe(gulp.dest(dstSass));
-
-});
 
 });
 
@@ -144,9 +138,9 @@ gulp.task('imgmin', function() {
 
         });
 
-return watch(srcImage, function() {
-
     gulp.src(srcImage)
+
+        .pipe(watch(srcImage))
 
         .pipe(plumber())
 
@@ -160,8 +154,6 @@ return watch(srcImage, function() {
 
 });
 
-});
-
 
 //把所有html页面扔进dist文件夹(不作处理);
 
@@ -169,15 +161,13 @@ return watch(srcImage, function() {
 
 gulp.task('html', function() {
 
-return watch([srcHtml, srcHtmlTemplate], function() {
-
     gulp.src([srcHtml, srcHtmlTemplate])
+
+        .pipe(watch([srcHtml, srcHtmlTemplate]))
 
         .pipe(plumber())
 
         .pipe(gulp.dest(dstHtml));
-
-});
 
 });
 
