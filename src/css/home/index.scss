@@ -410,29 +410,33 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: px2rem(52px); // 11
-  background-color: #fff;
+  height: px2rem(71px); // 11
+  background: url("../../img/home/icon_bottom.png") no-repeat left center;
+  background-size: px2rem(375px) px2rem(71px);
   z-index: 10;
-  display: flex;
-  .mask {
+  .wrap {
+    height: px2rem(50px);
+    width: 100%;
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
     bottom: 0;
-    background-color: #fff;
-    box-shadow: 0 px2rem(-2.5px) px2rem(12.5px) px2rem(2px) rgba(0, 0, 0, .1);
-    z-index: 11;
+    left: 0;
+    display: flex;
   }
   .center {
     width: px2rem(63px);
     height: px2rem(63px);
-    border-radius: 50%;
-    background-color: #fff;
     position: relative;
-    z-index: 9;
     top: px2rem(-12px);
-    box-shadow: 0 px2rem(-2.5px) px2rem(12.5px) px2rem(2px) rgba(0, 0, 0, .1);
+    .icon {
+      display: block;
+      width: px2rem(45px);
+      height: px2rem(45px);
+      margin: 0 auto;
+      margin-top: px2rem(10px);
+      background-size: px2rem(45px) px2rem(45px);
+      background-repeat: no-repeat;
+      margin-bottom: px2rem(1.5px);
+    }
   }
   .right {
     a:first-child {
@@ -444,7 +448,10 @@ body {
     position: relative;
     z-index: 12;
     flex: 1;
+    align-items: center;
     & > a {
+      outline: none;
+      margin-top: px2rem(5px);
       height: 100%;
       display: flex;
       align-items: center;
@@ -458,13 +465,70 @@ body {
         display: block;
         width: px2rem(20px);
         height: px2rem(20px);
-        background-color: #FADC17;
+        background-size: px2rem(20px) px2rem(20px);
+        background-repeat: no-repeat;
         margin-bottom: px2rem(1.5px);
       }
       .name {
         font-size: px2rem(14px);
         line-height: px2rem(20px);
-        color: #2A2B2F;
+        color: #D8D8D8;
+      }
+      &.active {
+        .name {
+          color: #2A2B2F;                  
+        }
+      }
+    }
+  }
+
+  .nav-home {
+    .icon {
+      background-image: url("../../img/home/icon_home02.png");
+    }
+    &.active {
+      .icon {
+        background-image: url("../../img/home/icon_home.png");
+      }
+    }
+  }
+  .nav-appoint {
+    .icon {
+      background-image: url("../../img/home/icon_appointment.png");
+    }
+    &.active {
+      .icon {
+        background-image: url("../../img/home/icon_appointment02.png");
+      }
+    }
+  }
+  .nav-im {
+    .icon {
+      background-image: url("../../img/home/icon_im.png");
+    }
+    &.active {
+      .icon {
+        background-image: url("../../img/home/icon_im02.png");
+      }
+    }
+  }
+  .nav-gift {
+    .icon {
+      background-image: url("../../img/home/icon_gift.png");
+    }
+    &.active {
+      .icon {
+        background-image: url("../../img/home/icon_gift02.png");
+      }
+    }
+  }
+  .nav-call {
+    .icon {
+      background-image: url("../../img/home/icon_call.png");
+    }
+    &.active {
+      .icon {
+        background-image: url("../../img/home/icon_call02.png");
       }
     }
   }
