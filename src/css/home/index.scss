@@ -47,8 +47,33 @@ body {
           display: block;
           width: pxTorem(39.6px);
           height: pxTorem(39.6px); 
-          background: red;
+          background-size: pxTorem(39.6px) pxTorem(39.6px);
+          background-repeat: no-repeat;
           margin-bottom: pxTorem(3.7px);
+          &.gkcj {
+            background-image: url("../../img/home/icon_gaokao.png");
+          }
+          &.xkcj {
+            background-image: url("../../img/home/icon_opt_gaokao.png");
+          }
+          &.myfz {
+            background-image: url("../../img/home/icon_high_school.png");
+          }
+          &.xfgx {
+            background-image: url("../../img/home/icon_van_school.png");
+          }
+          &.ffcj {
+            background-image: url("../../img/home/icon_scores.png");
+          }
+          &.yxxy {
+            background-image: url("../../img/home/icon_students.png");
+          }
+          &.xqjs {
+            background-image: url("../../img/home/icon_campus.png");
+          }
+          &.gyff {
+            background-image: url("../../img/home/icon_about.png");
+          }
         }
       }
     }
