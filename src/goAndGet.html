@@ -58,57 +58,67 @@
     <!-- Windows 8 磁贴颜色 -->
     <!-- reset style -->
     <link rel="stylesheet" href="../utils/reset/reset.css">
-    <link rel="stylesheet" href="./css/signUp/signUp.css">
-
+    <link rel="stylesheet" href="./css/goAndGet/goAndGet.css">
     <!-- rem flexible -->
-    <script src="../utils/zepto/zepto.min.js"></script>
     <script src="../utils/flexible/index.min.js"></script>
-    <title>预约</title>
-
+    <title>领取</title>
 </head>
 <body>
     <div class="header"></div>
 
-    <div >
-        <p>
-            非凡教育客服人员会在12h内联系你
-        </p>
+    <div class="banner">
+        <ul>
+            <li>
+                <a href="">
+                    <img src="" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="" alt="">
+                </a>
+            </li>
+        </ul>
     </div>
 
-    <div class="signUp">
-        <form action="">
-            <input type="text" name="user_name" required="required"
-                isTrue = false  placeholder="请输入你的姓名" data-label="姓名">
-
-            <div class="icon icon_head"></div>
-
-            <input type="text" name="user_telephone" required="required"
-                   isTrue = false  placeholder="请输入你的手机号" data-label="手机号">
-
-            <div class="icon icon_telephone"></div>
-
-
-            <div isTrue = false class="radioGroup curriculum" >
-                <div><input name="curriculum" type="radio" value="高考冲刺"><span>高考冲刺</span> <i></i></div>
-                <div ><input name="curriculum" type="radio" value="选考冲刺"><span>选考冲刺</span> <i></i></div>
-                <div ><input name="curriculum" type="radio" value="美院附中"><span>美院附中</span> <i></i></div>
-                <div ><input name="curriculum" type="radio" value="小凡公学"><span>小凡公学</span> <i></i></div>
+    <div class="navigation">
+        <div class="wrap">
+            <div class="left">
+                <a href="#" class="nav-home ">
+                    <i class="icon"></i>
+                    <span class="name">首页</span>
+                </a>
+                <a href="#" class="nav-appoint">
+                    <i class="icon"></i>
+                    <span class="name">预约</span>
+                </a>
             </div>
-
-            <button disabled=true id="submitBtn" >立即预约</button>
-        </form>
+            <div class="center">
+                <a href="" class="nav-call">
+                    <i class="icon"></i>
+                </a>
+            </div>
+            <div class="right">
+                <a href="#" class="nav-im">
+                    <i class="icon"></i>
+                    <span class="name">咨询</span>
+                </a>
+                <a href="#" class="nav-gift active">
+                    <i class="icon"></i>
+                    <span class="name">领取</span>
+                </a>
+            </div>
+        </div>
     </div>
-
-    <div id="back"></div>
-    <div id="popup">
-        <div class="logo"></div>
-
-        <div class="bgImg"></div>
-
-        <button>返回首页</button>
-    </div>
-
-    <script src="js/signUp/signUp.js"></script>
-
 </body>
 </html>

@@ -1,6 +1,7 @@
 //radio 变色
 $(".radioGroup >div >input").each(function() {
         $(this).bind("click", function() {
+            $("span").siblings('.radioColor').removeClass('radioColor');
             $(this).next().addClass('radioColor');
 
             $("div.radioGroup").attr("isTrue",true);
