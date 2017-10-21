@@ -69,45 +69,49 @@
 <body>
     <div class="header"></div>
 
-    <div >
-        <p>
-            非凡教育客服人员会在12h内联系你
-        </p>
+    <div class="title">
+        非凡教育客服人员会在12h内联系你
     </div>
 
     <div class="signUp">
-        <form action="">
-            <input type="text" name="user_name" required="required"
-                isTrue = false  placeholder="请输入你的姓名" data-label="姓名">
-
-            <div class="icon icon_head"></div>
-
-            <input type="text" name="user_telephone" required="required"
-                   isTrue = false  placeholder="请输入你的手机号" data-label="手机号">
-
-            <div class="icon icon_telephone"></div>
-
-
-            <div isTrue = false class="radioGroup curriculum" >
-                <div><input name="curriculum" type="radio" value="高考冲刺"><span>高考冲刺</span> <i></i></div>
-                <div ><input name="curriculum" type="radio" value="选考冲刺"><span>选考冲刺</span> <i></i></div>
-                <div ><input name="curriculum" type="radio" value="美院附中"><span>美院附中</span> <i></i></div>
-                <div ><input name="curriculum" type="radio" value="小凡公学"><span>小凡公学</span> <i></i></div>
+        <form class="form">
+            <div class="form-control name">
+                <label for="name"></label>
+                <input required type="text" id="name" name="name" placeholder="请输入您的姓名">
+            </div>
+            <div class="form-control mobile">
+                <label for="mobile"></label>
+                <input required type="text" id="mobile" name="mobile" placeholder="请输入您的手机号">
             </div>
 
-            <button disabled=true id="submitBtn" >立即预约</button>
+            <div class="form-control option">
+                <label for="option1">
+                    <input id="option1" type="radio" value="gkcj" name="option">
+                    高考冲刺
+                </label>
+                <label for="option2">
+                    <input id="option2" type="radio" value="xkcj" name="option">
+                    选考冲刺
+                </label>
+                <label for="option3">
+                    <input id="option3" type="radio" value="myfz" name="option">
+                    美院附中
+                </label>
+                <label for="option4">
+                    <input id="option4" type="radio" value="xfgx" name="option">
+                    小凡公学
+                </label>
+            </div>
+            <button disabled id="submitBtn" type="submit">立即预约</button>
         </form>
     </div>
 
-    <div id="back"></div>
-    <div id="popup">
-        <div class="logo"></div>
-
-        <div class="bgImg"></div>
-
-        <button>返回首页</button>
+    <div class="popup">
+        <div class="mask"></div>
+        <div class="content">
+            <a href="#" class="back">返回首页</a>
+        </div>
     </div>
-
     <script src="js/signUp/signUp.js"></script>
 
 </body>

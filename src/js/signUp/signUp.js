@@ -1,49 +1,56 @@
-//radio 变色
-$(".radioGroup >div >input").each(function() {
-        $(this).bind("click", function() {
-            $("span").siblings('.radioColor').removeClass('radioColor');
-            $(this).next().addClass('radioColor');
+$(document).ready(function() {
 
-            $("div.radioGroup").attr("isTrue",true);
-
-            isTrue();
-        });
+    $('#name, #mobile').on('input', function(e) {
+        checkField()
+        var label = $(this).prev('label')
+        e.target.value.length > 0 ? 
+            label.addClass('active') : label.removeClass('active')
     });
 
-    //输入框 变色
-    $(".signUp >form >input").bind('input propertychange',function(){
-        $(this).css("color","#212224");
 
-        if($(this).val().length !== 0 ){
-            $(this).attr("isTrue",true)
-        }else {
-            $(this).attr("isTrue",false)
+
+    $('.option').on('change', 'input', function(e) {
+        checkField()
+        $('.option').find('label').css({
+            color: '#ADADAD'
+        })
+        $(this).parent().css({
+            color: '#28A4FF'
+        })
+    });
+
+    function checkField() {
+        var fields = {};
+        var flag = false;
+        $('.form').serializeArray().forEach(item => {
+            fields[item.name] = item.value
+        })
+        if (typeof fields.option !== 'undefined') {
+            Object.keys(fields).forEach(key => {
+                if (typeof fields[key] === 'undefined' || !fields[key].length) {
+                    flag = true;
+                }
+            })
+        } else {
+            flag = true;
         }
-
-        isTrue();
-    });
-
-    //submit按钮
-    $(function(){
-        $("#submitBtn").click(function(){
-            $('#back').addClass('display-block');
-            $('#popup').addClass('display-block');
-        });
-    });
-
-    //监听按钮是否可用
-    function isTrue() {
-        var u_name = $('input[name="user_name"]').attr("isTrue");
-        var u_telePhone = $('input[name="user_telephone"]').attr("isTrue");
-        var radio = $("div.radioGroup").attr("isTrue");
-        if(u_name === 'true'
-            && radio === 'true'
-            && u_telePhone === 'true')
-        {
-            $("#submitBtn").css("opacity",".8");
-            $("#submitBtn").disabled = false;
-        }else{
-            $("#submitBtn").css("opacity",".2");
-            $("#submitBtn").disabled = true;
-        }
+        flag ? $('#submitBtn').attr('disabled', 'disabled')
+            : $('#submitBtn').attr('disabled', null);
     }
+
+    $('#submitBtn').on('click', function(e) {
+        e.preventDefault();
+        var fields = $('.form').serializeArray();
+        var data = {};
+        fields.forEach(item => {
+            data[item.name] = item.value;
+        })
+        var phoneReg = /^1(3|4|5|7|8)\d{9}$/;
+        if (!phoneReg.test(data.mobile)) {
+            alert('手机号码不符合格式')
+        } else {
+            $('.popup').show();
+        }
+    })
+
+});
