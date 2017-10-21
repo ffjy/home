@@ -20,7 +20,9 @@ var gulp = require('gulp'),
 
     plumber = require('gulp-plumber'),
 
-    watch = require('gulp-watch');
+    watch = require('gulp-watch'),
+    
+    babel = require('gulp-babel');
 
 
 //设置各种输入输出文件夹的位置;
@@ -58,6 +60,8 @@ gulp.task('script', function() {
         .pipe(watch(srcScript))
 
         .pipe(plumber())
+
+        .pipe(babel())
 
         .pipe(uglify())
 
