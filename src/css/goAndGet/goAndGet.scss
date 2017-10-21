@@ -3,12 +3,9 @@
 .header {
   height: pxTorem(160px);
   width: 100%;
-  position: relative;
-  margin: 0;
-  padding: 0;
   top: 0;
   left: 0;
-  background-color: yellow;
+  background: url("../../img/goAndGet/banner.png") no-repeat;
   background-size: 100% 100%;
 }
 
@@ -19,12 +16,34 @@
       position: relative;
       width: pxTorem(345px);
       height: pxTorem(146.5px);
-      opacity: .14;
-      background-color: #28A4FF;
       margin: {
         top: pxTorem(20px);
         left: pxTorem(15px);
       };
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          box-shadow: 0 px2rem(2.5px) px2rem(4px) rgba(0, 0, 0, .11);
+          border-radius: px2rem(4px);
+          &.slice {
+            box-shadow: 0 px2rem(2.5px) px2rem(4px) rgba(141, 106, 254, .11);
+          }
+          &.fz {
+            box-shadow: 0 px2rem(2.5px) px2rem(4px) rgba(77, 169, 246, .11);
+          }
+          &.gkxk {
+            box-shadow: 0 px2rem(2.5px) px2rem(4px) rgba(255, 124, 73, .11);
+          }
+          &.xiaofan {
+            box-shadow: 0 px2rem(2.5px) px2rem(4px) rgba(254, 170, 63, .11);
+          }
+        }
+      }
     }
 
     li:last-child {
