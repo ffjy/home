@@ -153,9 +153,12 @@
     .icon {
       background-image: url("../../img/home/icon_im.png");
     }
-    &.active {
+    &.active, &:active, &:hover {
       .icon {
         background-image: url("../../img/home/icon_im02.png");
+      }
+      .name {
+        color: #2A2B2F;                  
       }
     }
   }

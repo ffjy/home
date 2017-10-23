@@ -282,6 +282,9 @@ body {
     margin: px2rem(10px) auto 0;
     border-radius: px2rem(4px);
     overflow: hidden;
+    .swiper-wrapper {
+      transform-style: preserve-3d;
+    }
     h2 {
       margin: px2rem(14.5px) 0 px2rem(14.5px) px2rem(9px);
       font-weight: normal;
@@ -300,15 +303,19 @@ body {
     .swiper-slide {
       width: px2rem(275px) !important; 
       margin-left: px2rem(5px);
-      margin-right: px2rem(5px);     
+      margin-right: px2rem(5px);      
       .img {
         width: px2rem(275px);
         height: px2rem(150px);
-        border-radius: px2rem(4px);    
+        border-radius: px2rem(4px);
+        display: flex;
+        align-items: center;    
+        transform: translate3d(0, 0, px2rem(-1000px));
         img {
           width: px2rem(275px);
           height: px2rem(150px);
           border-radius: px2rem(4px);  
+          // transition: height .5s ease;
         }
       }
       .name {
@@ -318,7 +325,14 @@ body {
         line-height: px2rem(20px);
         margin-top: px2rem(14px);
       }
+      &.swiper-slide-active{
+        transform: translate3d(0, 0, 300px);   
+      }
       &.swiper-slide-active .img {
+        perspective: 500;
+      }
+      &.swiper-slide-active .img img {
+        height: px2rem(150px);
         box-shadow: 0 px2rem(2.5px) px2rem(4px) rgba(0, 0, 0, .11);
       }
     }
@@ -559,9 +573,12 @@ body {
     .icon {
       background-image: url("../../img/home/icon_im.png");
     }
-    &.active {
+    &.active, &:active, &:hover {
       .icon {
         background-image: url("../../img/home/icon_im02.png");
+      }
+      .name {
+        color: #2A2B2F;                  
       }
     }
   }
