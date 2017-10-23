@@ -1,0 +1,91 @@
+@import '../mixins';
+
+html, body {
+  background-color: #f5f5f5;
+}
+
+.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: px2rem(375px);
+  height: px2rem(44px);
+  box-shadow: 0 px2rem(1px) px2rem(3px) rgba(0,0,0,0.10);
+  background-color: #fff;
+  h1 {
+    text-align: center;
+    line-height: px2rem(44px);
+    color: #212224;
+    font-size: px2rem(17px);
+  }
+  #back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: px2rem(35px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    i {
+      display: block;
+      width: px2rem(10px);
+      height: px2rem(16px);
+      background-color: red;
+    }
+  }
+}
+
+.main {
+  width: px2rem(355px);
+  margin: 0 auto;
+  padding-top: px2rem(64px);
+  .item {
+    width: px2rem(355px);
+    height: px2rem(100px);
+    border-radius: px2rem(3px);
+    box-shadow: 0 px2rem(1px) px2rem(2px) 0 rgba(208, 226, 248, .5);
+    background-color: #fff;
+    position: relative;
+    margin-bottom: px2rem(18px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+    img {
+      width: px2rem(80px);
+      height: px2rem(110px);
+      border: none;
+      outline: none;
+      display: block;
+      position: absolute;
+      left: px2rem(10px);
+      bottom: 0;
+    }
+    .detail {
+      margin-left: px2rem(99px);
+      color: #212224;
+      padding-top: px2rem(12px);
+      .name {
+        font-size: px2rem(18px);
+        font-weight: bold;
+        line-height: px2rem(25px);
+      }
+      .label {
+        margin-top: px2rem(4.5px);
+        font-size: px2rem(15px);
+        line-height: px2rem(21px);
+      }
+      .intro {
+        margin-top: px2rem(3.5px);
+        font-size: px2rem(12px);
+        color: #86888A;
+        width: px2rem(237.5px);
+        line-height: px2rem(16.5px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+}

@@ -10,14 +10,16 @@ body {
 
 .header {
   width: pxTorem(375px);
-  height: pxTorem(390px);
+  height: pxTorem(375px);
   background-color: rgba(20, 196, 169, 0.60);
+  background: url("../../img/home/banner01.png") no-repeat;
+  background-size: pxTorem(375px) pxTorem(375px);
   .menu {
     width: pxTorem(345px);
     height: pxTorem(165px);
     border-radius: pxTorem(4px);
     position: relative;
-    top: pxTorem(335px);
+    top: pxTorem(320px);
     background-color: #fff;
     margin: 0 auto;
     ul {
@@ -88,7 +90,6 @@ body {
       li {
         width: px2rem(345px);
         height: px2rem(140px);
-        background-color: yellowgreen;
         margin: px2rem(10px) auto 0;
         position: relative;
         border-radius: px2rem(4px);        
@@ -157,7 +158,6 @@ body {
         .img-wrap {
           width: px2rem(87.5px);
           height: px2rem(51px);
-          background: red;
           position: relative;
           img {
             width: px2rem(70px);
@@ -197,7 +197,6 @@ body {
         width: px2rem(112px);
         height: px2rem(155px);
         position: relative;
-        background: greenyellow;
         overflow: hidden;
         margin-bottom: px2rem(4.5px);
         border-radius: px2rem(4px);
@@ -244,7 +243,6 @@ body {
         width: px2rem(112px);
         height: px2rem(155px);
         position: relative;
-        background: greenyellow;
         overflow: hidden;
         margin-bottom: px2rem(4.5px);
         border-radius: px2rem(4px); 
@@ -306,7 +304,6 @@ body {
       .img {
         width: px2rem(275px);
         height: px2rem(150px);
-        background: greenyellow;
         border-radius: px2rem(4px);    
         img {
           width: px2rem(275px);
@@ -355,7 +352,6 @@ body {
         width: px2rem(112px);
         height: px2rem(155px);
         position: relative;
-        background: greenyellow;
         overflow: hidden;
         margin-bottom: px2rem(4.5px);
         border-radius: px2rem(4px); 
@@ -404,20 +400,52 @@ body {
         box-shadow: 0 px2rem(2.5px) px2rem(4px) rgba(0, 0, 0, .11);
         border-radius: px2rem(4px);
       }
+      img {
+        width: 100%;
+      }
     }
     .ad-free {
       margin-top: px2rem(10px);
       background: #fff;
       width: 100%;
       padding-bottom: px2rem(10px);
+      .ad-free-header {
+        height: px2rem(85.5px);
+        margin-left: px2rem(15px);
+        color: #2F3030;
+        overflow: hidden;
+        background: url("../../img/home/FREE.png") no-repeat;
+        background-size: px2rem(205px) px2rem(56px);
+        background-position: right top;
+        .sub-title {
+          font-size: px2rem(15px);
+          line-height: px2rem(21px);
+          margin-top: px2rem(15px);
+        }
+        h2 {
+          font-size: px2rem(20px);
+          line-height: px2rem(28px);
+        }
+      }
       .item {
         margin: 0 auto;
         margin-bottom: px2rem(15px);
         width: px2rem(345px);
         height: px2rem(146.5px);
-        box-shadow: 0 px2rem(2.5px) px2rem(4px) rgba(0, 0, 0, .11);
-        background-color: goldenrod;
-        border-radius: px2rem(4px);
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          img {
+            display: block;
+            height: 100%;
+            width: 100%;
+            outline: none;
+            border: none;
+            border-radius: px2rem(4px);
+            box-shadow: 0 px2rem(2.5px) px2rem(4px) rgba(0, 0, 0, .11);
+          }
+        }
       }
     }
   }
