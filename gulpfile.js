@@ -22,7 +22,9 @@ var gulp = require('gulp'),
 
     watch = require('gulp-watch'),
     
-    babel = require('gulp-babel');
+    babel = require('gulp-babel'),
+
+    autoprefixer = require('gulp-autoprefixer');
 
 
 //设置各种输入输出文件夹的位置;
@@ -82,6 +84,11 @@ gulp.task('css', function() {
 
         .pipe(plumber())
 
+        .pipe(autoprefixer({
+                browsers: ['last 2 versions', 'Android >= 4.0'],
+                cascade: false
+        }))
+
         .pipe(minifyCSS())
 
         .pipe(gulp.dest(dstCSS));
@@ -100,6 +107,11 @@ gulp.task('sass', function() {
         .pipe(watch(srcSass))
 
         .pipe(plumber())
+
+        .pipe(autoprefixer({
+                browsers: ['last 2 versions', 'Android >= 4.0'],
+                cascade: false
+        }))
 
         .pipe(sass({
 
