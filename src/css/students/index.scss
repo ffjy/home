@@ -12,6 +12,7 @@ html, body {
   height: px2rem(44px);
   box-shadow: 0 px2rem(1px) px2rem(3px) rgba(0,0,0,0.10);
   background-color: #fff;
+  z-index: 100;
   h1 {
     text-align: center;
     line-height: px2rem(44px);
