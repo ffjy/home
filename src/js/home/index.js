@@ -5,8 +5,14 @@ $(document).ready(function() {
     freeMode: true
   })
   var school = new Swiper('.school-container', {
+    effect : 'coverflow',
     slidesPerView: 'auto',
     loop: true,
-    centeredSlides: true
+    centeredSlides: true,
+    coverflow: {
+      slideShadows: false,
+      depth: 1,
+      stretch: 35,
+    }
   })
 });

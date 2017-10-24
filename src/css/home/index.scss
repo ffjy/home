@@ -282,9 +282,6 @@ body {
     margin: px2rem(10px) auto 0;
     border-radius: px2rem(4px);
     overflow: hidden;
-    .swiper-wrapper {
-      transform-style: preserve-3d;
-    }
     h2 {
       margin: px2rem(14.5px) 0 px2rem(14.5px) px2rem(9px);
       font-weight: normal;
@@ -310,12 +307,10 @@ body {
         border-radius: px2rem(4px);
         display: flex;
         align-items: center;    
-        transform: translate3d(0, 0, px2rem(-1000px));
         img {
           width: px2rem(275px);
           height: px2rem(150px);
           border-radius: px2rem(4px);  
-          // transition: height .5s ease;
         }
       }
       .name {
@@ -324,12 +319,6 @@ body {
         font-size: px2rem(14px);
         line-height: px2rem(20px);
         margin-top: px2rem(14px);
-      }
-      &.swiper-slide-active{
-        transform: translate3d(0, 0, 300px);   
-      }
-      &.swiper-slide-active .img {
-        perspective: 500;
       }
       &.swiper-slide-active .img img {
         height: px2rem(150px);
