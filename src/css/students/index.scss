@@ -33,7 +33,9 @@ html, body {
       display: block;
       width: px2rem(10px);
       height: px2rem(16px);
-      background-color: red;
+      background-size: px2rem(10px) px2rem(16px);
+      background-repeat: no-repeat;
+      background-image: url("../../img/common/back.png");
     }
   }
 }
