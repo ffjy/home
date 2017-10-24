@@ -1,0 +1,69 @@
+  @import '../mixins';
+
+  html, body {
+    background-color: #f5f5f5;
+  }
+
+  .header {
+    width: 100%;
+    height: 75px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .headSculpture {
+    position: relative;
+    width: pxTorem(48px);
+    height: pxTorem(48px);
+    top: pxTorem(-24px);
+    border-radius: pxTorem(180px);
+    margin: 0 auto;
+    background-color: yellow;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: pxTorem(180px);
+      border: px2rem(1px) solid #979797;
+    }
+
+  }
+
+  .object{
+    width: 100%;
+    text-align: center;
+    color: #212224;
+
+    .objectName {
+      height: px2rem(21px);
+      font-size: pxTorem(15px);
+    }
+
+    .academicTitle {
+      line-height: px2rem(18.5px);
+      font-size: pxTorem(13px);
+      margin-top: pxTorem(10px);
+    }
+  }
+
+  .shadow {
+    width: pxTorem(250px);
+    height: pxTorem(.25px);
+    margin: pxTorem(20px) auto;
+    background-color: #E6E6E6;
+    opacity: .2;
+    border: pxTorem(.25px) solid #E6E6E6;
+  }
+
+  .details {
+    width: pxTorem(333px);
+    margin: 0 auto;
+
+    font-size: pxTorem(13px);
+    color: #212224;
+    letter-spacing: pxTorem(1px);
+    line-height: pxTorem(18.5px);
+  }
