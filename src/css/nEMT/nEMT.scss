@@ -71,53 +71,72 @@
     background-size: 100% 100%;
 
     >form{
+
       > div {
           position: relative;
           width: 100%;
           height: pxTorem(30px);
           text-align: center;
           margin-top: pxTorem(10px);
+          display: flex;
+          align-items: center;
+          box-sizing: border-box;
 
           >i {
-            position: absolute;
+            margin: {
+              left: px2rem(55px);
+              right: px2rem(11px);
+            }
             width: pxTorem(16.5px);
             height: pxTorem(15.5px);
-            display: inline-block;
-            left: pxTorem(55px);
-            top: pxTorem(8px);
+            display: block;
             background-size: 100% 100%;
+            background-repeat: no-repeat;
           }
 
           >input {
             height: pxTorem(30px);
             width: pxTorem(210px);
             border: none;
-            color: #C9C9C9;
+            color: #2F3030;
+            outline: none;
             font-size: pxTorem(15px);
             line-height: pxTorem(20px);
+            border-radius: px2rem(4px);
+            padding-left: px2rem(15px);
+            box-sizing: border-box;
+            &::-webkit-input-placeholder {
+              color: #C9C9C9;
+            }
           }
 
           >button {
             width: pxTorem(210px);
             height: pxTorem(30px);
+            font-size: pxTorem(15px);
+            line-height: px2rem(30px);
+            display: block;
             border: none;
+            margin: 0 auto;
             border-radius: pxTorem(27.5px);
             background-color: #FBDD20;
+            padding: 0;
+            color: #2F3030;
           }
 
-          &:first-child {
-            top: pxTorem(70px);
+        &:first-child {
+          top: pxTorem(70px);
 
-            >i {
-              background-image: url("../../img/nEMT/icon_user.png");
-            }
+          >i {
+            background-image: url("../../img/nEMT/mzi.png");
           }
+        }
 
         &:nth-child(2) {
           top: pxTorem(75px);
 
           >i {
-            background-image: url("../../img/nEMT/icon_telephone.png");
+            background-image: url("../../img/nEMT/dianh.png");
           }
         }
         
