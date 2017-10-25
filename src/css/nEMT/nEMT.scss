@@ -71,7 +71,6 @@
     background-size: 100% 100%;
 
     >form{
-
       > div {
           position: relative;
           width: 100%;
@@ -106,13 +105,13 @@
             background-color: #FBDD20;
           }
 
-        &:first-child {
-          top: pxTorem(70px);
+          &:first-child {
+            top: pxTorem(70px);
 
-          >i {
-            background-image: url("../../img/nEMT/icon_user.png");
+            >i {
+              background-image: url("../../img/nEMT/icon_user.png");
+            }
           }
-        }
 
         &:nth-child(2) {
           top: pxTorem(75px);
