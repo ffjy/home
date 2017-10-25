@@ -193,6 +193,7 @@ body {
     .swiper-slide {
       margin-left: px2rem(10px);
       width: px2rem(112px) !important;
+      display: block;
       .img {
         width: px2rem(112px);
         height: px2rem(155px);
@@ -239,6 +240,7 @@ body {
     .swiper-slide {
       margin-left: px2rem(10px);
       width: px2rem(112px) !important;
+      display: block;
       .img {
         width: px2rem(112px);
         height: px2rem(155px);
@@ -300,7 +302,8 @@ body {
     .swiper-slide {
       width: px2rem(275px) !important; 
       margin-left: px2rem(5px);
-      margin-right: px2rem(5px);      
+      margin-right: px2rem(5px);    
+      display: block;  
       .img {
         width: px2rem(275px);
         height: px2rem(150px);
@@ -351,6 +354,7 @@ body {
     .swiper-slide {
       margin-left: px2rem(10px);
       width: px2rem(112px) !important;
+      display: block;
       .img {
         width: px2rem(112px);
         height: px2rem(155px);
