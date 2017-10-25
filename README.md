@@ -12,7 +12,10 @@
   - nEMT.html 高考选考
   - optional.html 选考冲刺
   - militaryExploits.html 非凡战绩
+  - highSchool.html 美院附中
   - opus.html 师生作品
+  - publicPraise.html 口碑
+  - courses.html 课程列表 
   - students.html 优秀学员列表页
     - studentDetails.html 学员页
   - teachers.html 名师列表页
