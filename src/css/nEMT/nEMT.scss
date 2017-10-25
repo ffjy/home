@@ -1,0 +1,133 @@
+  @import '../mixins';
+
+  html, body {
+    background-color: #f5f5f5;
+  }
+
+  .head {
+    width: 100%;
+    height: px2rem(190px);
+    background-image: url("../../img/nEMT/banner10.png");
+    background-size: 100% 100%;
+    margin-bottom: pxTorem(9.5px);
+  }
+
+  .nav {
+    height: px2rem(35px);
+    background-color: #fff;
+    box-shadow: 0 px2rem(1px) px2rem(3px) rgba(0,0,0,0.10);
+
+    a {
+      color: #8E8F92;
+      font-size: px2rem(15px);
+      padding: 0 px2rem(14px);
+      width: auto;
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      margin: 0 px2rem(5px);
+      position: relative;
+      &:before, &:after {
+        content: '';
+        width: 0;
+        bottom: 0;
+        height: px2rem(2px);
+        background-color: #FBDD20;
+        position: absolute;
+        transition: width ease .5s;
+      }
+      &:before {
+        left: 50%;
+      }
+      &:after {
+        right: 50%;
+      }
+      &.active {
+        &:before, &:after {
+          width: 50%;
+        }
+        color: #212224;
+      }
+    }
+  }
+
+  .content {
+    width: px2rem(346.5px);
+    margin: px2rem(15px) auto;
+
+    font-size: px2rem(13px);
+    color: #212224;
+    line-height: px2rem(18.5px);
+  }
+
+  .signUp {
+    position: relative;
+    width: 100%;
+    height: pxTorem(223.5px);
+    margin-top: pxTorem(17px);
+    background-image: url("../../img/nEMT/bg1.png");
+    background-size: 100% 100%;
+
+    >form{
+
+      > div {
+          position: relative;
+          width: 100%;
+          height: pxTorem(30px);
+          text-align: center;
+          margin-top: pxTorem(10px);
+
+          >i {
+            position: absolute;
+            width: pxTorem(16.5px);
+            height: pxTorem(15.5px);
+            display: inline-block;
+            left: pxTorem(55px);
+            top: pxTorem(8px);
+            background-size: 100% 100%;
+          }
+
+          >input {
+            height: pxTorem(30px);
+            width: pxTorem(210px);
+            border: none;
+            color: #C9C9C9;
+            font-size: pxTorem(15px);
+            line-height: pxTorem(20px);
+          }
+
+          >button {
+            width: pxTorem(210px);
+            height: pxTorem(30px);
+            border: none;
+            border-radius: pxTorem(27.5px);
+            background-color: #FBDD20;
+          }
+
+        &:first-child {
+          top: pxTorem(70px);
+
+          >i {
+            background-image: url("../../img/nEMT/icon_user.png");
+          }
+        }
+
+        &:nth-child(2) {
+          top: pxTorem(75px);
+
+          >i {
+            background-image: url("../../img/nEMT/icon_telephone.png");
+          }
+        }
+        
+        &:nth-child(3) {
+          top: pxTorem(90px);
+
+          color: #2F3030;
+          letter-spacing: pxTorem(.58px);
+        }
+      }
+    }
+  }
