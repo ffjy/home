@@ -9,8 +9,10 @@
 - goAndGet.html 领取列表页
 - receive.html 领取页
 - 二级页面
-  - militaryExploits.html 非凡战绩
+  - nEMT.html 高考选考
   - optional.html 选考冲刺
+  - militaryExploits.html 非凡战绩
+  - opus.html 师生作品
   - students.html 优秀学员列表页
     - studentDetails.html 学员页
   - teachers.html 名师列表页
