@@ -18,11 +18,28 @@ $(document).ready(function() {
         }).on('touchstart', function(e) {
             e.preventDefault();
         })
+        var width = mySwiper.container.width();
+        var maxTranslate = mySwiper.maxTranslate();
+        var maxWidth = -maxTranslate + width / 2;
 
         var navSwiper = $('.nav-content').swiper({
             slidesPerView: 'auto',
         });
         mySwiper.on('tap', function(swiper, e) {
+
+            var slide = swiper.slides[swiper.clickedIndex];
+            var slideLeft = slide.offsetLeft;
+            var slideWidth = slide.clientWidth;
+            var slideCenter = slideLeft + slideWidth / 2;
+            mySwiper.setWrapperTransition(300)
+            if (slideCenter < width / 2) {
+                mySwiper.setWrapperTranslate(0)
+            } else if (slideCenter > maxWidth) {
+                mySwiper.setWrapperTranslate(maxTranslate)
+            } else {
+                mySwiper.setWrapperTranslate(width / 2 - slideCenter);
+            }
+
             $(".swiper-container  .active").removeClass('active')
             $(".swiper-container .swiper-slide").eq(swiper.clickedIndex).addClass('active')
             navSwiper && navSwiper.slideTo(swiper.clickedIndex);
