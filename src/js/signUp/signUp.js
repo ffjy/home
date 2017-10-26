@@ -38,7 +38,7 @@ $(document).ready(function() {
             : $('#submitBtn').attr('disabled', null);
     }
 
-    $('#submitBtn').on('click', function(e) {
+    /*$('#submitBtn').on('click', function(e) {
         e.preventDefault();
         var fields = $('.form').serializeArray();
         var data = {};
@@ -49,8 +49,8 @@ $(document).ready(function() {
         if (!phoneReg.test(data.mobile)) {
             alert('手机号码不符合格式')
         } else {
-            $('.popup').show();
+            //$('.popup').show();
         }
-    })
+    })*/
 
 });

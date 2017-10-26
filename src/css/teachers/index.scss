@@ -79,8 +79,9 @@ html, body {
 
 .main {
   width: px2rem(355px);
-  margin: px2rem(96px) auto 0;
+  margin: px2rem(66px) auto 0;
   overflow: hidden;
+  padding-top: px2rem(30px);
   .item {
     width: 100%;
     height: px2rem(100px);
@@ -95,13 +96,23 @@ html, body {
     margin: {
       bottom: px2rem(19px);
     }
-    > img {
+    .img {
       width: px2rem(80px);
       height: px2rem(110px);
-      display: block;
       position: absolute;
       bottom: 0;
       left: px2rem(10px);
+      overflow: hidden;
+      font-size: 0;
+      img {
+        width: px2rem(110px);
+        height: px2rem(110px);
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        display: block;
+        transform: translateX(-50%);
+      }
     }
     .detail {
       color: #212224;
