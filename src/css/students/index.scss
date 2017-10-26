@@ -53,9 +53,6 @@ html, body {
     background-color: #fff;
     position: relative;
     margin-bottom: px2rem(18px);
-    &:last-child {
-      margin-bottom: 0;
-    }
     img {
       width: px2rem(80px);
       height: px2rem(110px);
