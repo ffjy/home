@@ -209,18 +209,6 @@ gulp.task('server', function() {
 
 gulp.task('auto', function() {
 
-        /*
-    gulp.watch(srcScript, ['script']);
-
-    gulp.watch(srcCss, ['css']);
-
-    gulp.watch(srcSass, ['sass']);
-
-    gulp.watch(srcImage, ['imgmin']);
-
-    gulp.watch(srcHtml, ['html']);
-*/
-
     gulp.watch('./dist/**/*.*').on('change', browserSync.reload);
 
 });
