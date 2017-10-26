@@ -29,4 +29,15 @@ $(document).ready(function() {
      * fastclick
      */
     FastClick.attach(document.body);
+
+    /**
+     * headRoom
+     */
+    // if ($('.headroom').length) {
+    //     var headroom = new Headroom($('.headroom')[0]);
+    //     headroom.init();
+    // }
+    var myElement = document.querySelector(".headroom");
+    var headroom  = new Headroom(myElement);
+    headroom.init();
 });
