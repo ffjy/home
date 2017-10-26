@@ -165,17 +165,17 @@ html, body {
         .label {
           display: block;
           position: absolute;
-          width: px2rem(60px);
+          width: px2rem(90px);
           background-color: #C8041D;
-          font-size: px2rem(12px);
+          font-size: px2rem(11px);
           color: #fff;
           text-align: center;
-          height: px2rem(45px);
+          height: px2rem(16px);
           transform-origin: center;
-          transform:  rotate(-45deg);
-          left: -.65rem;
-          top: -.45rem;
-          line-height: px2rem(70px);
+          transform:  rotate(45deg);
+          left: -.6rem;
+          bottom: .3rem;
+          line-height: px2rem(16px);
         } 
       }
       .name {
