@@ -84,9 +84,13 @@ html, body {
   width: px2rem(346.5px);
   top: px2rem(79px);
   margin: px2rem(15px) auto;
-
+  overflow: hidden;
   font-size: px2rem(13px);
   color: #212224;
   line-height: px2rem(18.5px);
+  .swiper-slide {
+    margin-right: px2rem(15px);
+    word-break: break-all;
+  }
 }
 

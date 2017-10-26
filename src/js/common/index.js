@@ -19,9 +19,13 @@ $(document).ready(function() {
             e.preventDefault();
         })
 
+        var navSwiper = $('.nav-content').swiper({
+            slidesPerView: 'auto',
+        });
         mySwiper.on('tap', function(swiper, e) {
             $(".swiper-container  .active").removeClass('active')
             $(".swiper-container .swiper-slide").eq(swiper.clickedIndex).addClass('active')
+            navSwiper && navSwiper.slideTo(swiper.clickedIndex);
         })
     }
 

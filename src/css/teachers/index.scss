@@ -80,6 +80,7 @@ html, body {
 .main {
   width: px2rem(355px);
   margin: px2rem(96px) auto 0;
+  overflow: hidden;
   .item {
     width: 100%;
     height: px2rem(100px);
