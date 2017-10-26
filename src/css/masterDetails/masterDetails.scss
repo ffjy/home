@@ -7,27 +7,31 @@
 
   .header {
     width: 100%;
-    height: 75px;
+    height: pxTorem(75px);
+    overflow: hidden;
 
     img {
       width: 100%;
       height: 100%;
+      display: block;
     }
   }
 
   .headSculpture {
     position: relative;
-    width: pxTorem(48px);
-    height: pxTorem(48px);
-    top: pxTorem(-24px);
-    border-radius: pxTorem(180px);
+    width: pxTorem(60px);
+    height: pxTorem(60px);
+    top: pxTorem(-30px);
+    border-radius: 50%;
     margin: 0 auto;
+    overflow: hidden;
 
     img {
+      display: block;
       width: 100%;
       height: 100%;
-      border-radius: pxTorem(180px);
-      border: px2rem(1px) solid #979797;
+      border-radius: 50%;
+      border: px2rem(1px) solid #fff;
     }
 
   }
