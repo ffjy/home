@@ -1,12 +1,18 @@
 @import '../common';
+html, body, .page {
+  width: 100%;
+}
 .page {
+  overflow-x: hidden;
   .container {
     width: 1200px;
     margin: 0 auto;
-    border-left: 1px solid;
-    border-right: 1px solid;
   }
   .header {
+    height: 120px;
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
     .top {
       .home {
         display: block;
@@ -16,6 +22,7 @@
       }
       .address {
         display: flex;
+        align-items: center;
         height: 16px;
         line-height: 16px; 
         float: left;
@@ -24,6 +31,8 @@
         }
         > li {
           padding: 0 15px;
+          display: flex;
+          align-items: center;
           &:not(:last-child) {
             border-right: 1px solid #888;
           }
@@ -45,5 +54,333 @@
         background-color: #723;
       }
     }
+    .nav-wrap {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  .banner {
+    height: 600px;
+    background-color: #e6e6e6;
+  }
+  .sub-banner {
+    height: 300px;
+
+    .container {
+
+
+      .web-width {
+        min-width: 1200px;
+        width: 100%;
+        position: relative;
+        z-index: 5;
+        height: 380px;
+        background-color: #ffffff;
+
+        .main-div {
+          position: relative;
+          text-align: center;
+          height:380px;
+          width: 1200px;
+          margin: 0 auto;
+          padding: 0;
+          box-sizing: border-box;
+
+          >ul {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            width: 1240px;
+            height:300px;
+            top: -73px;
+            text-align: center;
+
+            >li {
+              margin: 0;
+              padding: 0px;
+              width:85px;
+              height:300px;
+              position:relative;
+              overflow:hidden;
+              float:left;
+
+              a {
+                .imgTop {
+                  position: absolute;
+                  top: 0;
+                  text-align: center;
+                  height: 300px;
+
+                  .accordion-string {
+                    top: 0px;
+                    left: 0px;
+                    z-index: 9999;
+                    position:relative;
+                    width: 1020px;
+                    height: 100%;
+                    display: block;
+                    text-align: center;
+
+
+                    .accordion-img {
+                      position: absolute;
+                      margin: 0;
+                      padding: 0;
+                      left: 0;
+                      top: 0;
+
+                      transition: all 0.5s ease-in-out;
+                    }
+
+                    .accordion-slide {
+                      left: 96px!important;
+                      top: -96px!important;
+                      transition: .5s;
+                    }
+
+                    .btn {
+                      position: absolute;
+                      width: 185px;
+                      height: 42px;
+                      top: 230px;
+                      left: 415px;
+                      border-radius: 35px;
+                      border: none;
+                      font-size: 20px;
+                      background-color: #ffe400;
+                    }
+
+                    .btn:hover {
+                      cursor: pointer;
+                      transition: .5s;
+                    }
+                  }
+
+                  .accordion-string-block {
+                    display: block;
+                  }
+                }
+
+                .imgTop-first {
+                  background-image: url("../../img/banner_bg01.png");
+                }
+
+                .imgTop-second {
+                  background-image: url("../../img/banner_bg02.png");
+                }
+
+                .imgTop-third {
+                  background-image: url("../../img/banner_bg03.png");
+                }
+              }
+            }
+
+            >li:hover {
+              cursor: pointer;
+            }
+
+            >li.first{
+              width:1020px;
+            }
+          }
+
+
+        }
+      }
+
+    }
+  }
+  .toutiao {
+    height: 400px;
+    .main {
+      margin-top: 50px;
+      display: flex;
+      height: 200px;
+      .item {
+        height: 100%;
+        background-size: cover;
+        background-position: bottom;
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        z-index: 1;
+        &:hover {
+          .blur-container {
+            bottom: 0;
+            background-color: rgba(224,18,52,.8);
+            color: #fff;
+          }
+        }
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+        .blur-container {
+          position: absolute;
+          bottom: 0;
+          overflow: hidden;
+          &:before {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            filter: blur(10px);
+            background-size: cover;
+            margin: -20px;
+            z-index: -1;
+          }
+        }
+        .act-item-cover {
+          bottom: -55px;
+          width: 100%;
+          height: 108px;
+          padding: 24px;
+          box-sizing: border-box;
+          background-color: hsla(0,0%,100%,.8);
+          transition: all .3s;
+          &:before {
+            background-position: bottom;
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
+  .look-all {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    &:before,
+    &:after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      display: block;
+      background-color: #282727;
+    }
+    >a {
+      color: #282727;
+      display: block;
+      width: 160px;
+      height: 26px;
+      line-height: 26px;
+      text-align: center;
+      border: 1px solid #282727;
+      box-sizing: border-box;
+    }
+  }
+  .zhanji {
+    padding-bottom: 50px;
+    .main {
+      margin-top: 50px;
+      display: flex;
+      height: 300px;
+      .item {
+        flex: 1;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+        &:hover {
+          .blur-container {
+            bottom: 0;
+          }
+        }
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+        .blur-container {
+          width: 100%;
+          position: absolute;
+          bottom: -70px;
+          transition: all .3s;
+          height: 70px;
+          box-sizing: border-box;
+          background-color: rgba(255, 255, 255, .9);
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+  .people {
+    padding-bottom: 50px;
+    .main {
+      margin-top: 50px;
+      height: 300px;
+      position: relative;
+      overflow-x: hidden;
+
+      .container {
+        width: 100%;
+        overflow-x: hidden;
+      }
+      .item {
+        width: 200px;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+        &:hover {
+          .blur-container {
+            top: 0;
+          }
+        }
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+        .blur-container {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          bottom: -70px;
+          transition: all .6s;
+          top: 100%;
+          box-sizing: border-box;
+          background-color: rgba(255, 225, 0, .9);
+          padding: 10px 20px;
+          .top {
+            width: 100%;
+            color: #fff;
+            position: absolute;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .5);
+            top: -36px;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+  .school {
+    .main {
+      overflow: hidden;
+    }
+    .swiper-slide {
+      width: 500px;
+      img {
+        width: 500px;
+        height: 300px;
+      }
+      .bottom {
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        > span {
+          margin: 0 15px;
+        }
+        &:before,
+        &:after {
+          flex: 1;
+          display: flex;
+          height: 2px;
+          content: '';
+          background-color: #666;
+        }
+      }
+    }
   }
 }
+

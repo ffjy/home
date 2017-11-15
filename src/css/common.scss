@@ -15,6 +15,129 @@
   float: right;
 }
 
+.nav {
+  height: 40px;
+  position: relative;
+  a {
+    color: #383838;
+  }
+  .nav-first {
+    display: flex;
+    height: 100%;
+    > li {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: all .5s;
+      &.active {
+        .nav-second {
+          display: block;
+        }
+      }
+      &.teacher-power {
+        .nav-second {
+          background: rgba(255, 255, 255, .5);
+        }
+      }
+      &:hover {
+        background-color: #FFE100;
+      }
+      &:first-child {
+        width: 250px;
+      }
+      &:not(:first-child) {
+        padding: 0 46px;
+      }
+      &.active {
+        background-color: #FFE100;
+      }
+    }
+  }
+  .nav-second {
+    display: none;
+    top: 40px;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #fff, rgba(0, 0, 0, 0));
+    >li {
+      height: 69px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px 1px;
+      position: relative;
+      transition: all .5s;
+
+      &:hover {
+        background-color: #fff;
+      }
+      a {
+        color: #919191;
+      }
+      &:not(:last-child) {
+        &:after {
+          content: '';
+          position: absolute;
+          width: calc(100% - 30px);
+          bottom: 0;
+          height: 1px;
+          left: 15px;
+          background-color: #e6e6e6;
+        }
+      }
+      .icon-right {
+        width: 10px;
+        height: 20px;
+        background-color: red;
+      }
+    }
+  }
+  .nav-third {
+    position: absolute;
+    top: 10px;
+    left: 100%;
+    width: 450px;
+    min-height: 100px;
+    background-color: #fff;
+    display: none;
+    padding: 10px 25px 10px 15px;
+    > li {
+      padding: 20px 20px 20px 15px;
+      b {
+        color: #282727;
+      }
+      .head {
+        font-weight: bold;
+        color: #282727;
+        float: left;
+      }
+      .main {
+        font-size: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 80px;
+        a {
+          display: block;
+          padding: 0 20px;
+          margin-bottom: 20px;
+          color: #808080;
+          &:hover {
+            color: #1297DA;
+          }
+        }
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid #E6E6E6;
+      }
+    }
+  }
+}
+
+
 ul, li {
   list-style: none;
   margin: 0;
