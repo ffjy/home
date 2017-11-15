@@ -1,3 +1,4 @@
+@import '../common';
 .page {
   .container {
     width: 1200px;
@@ -9,10 +10,39 @@
     .top {
       .home {
         display: block;
-        float: left;
         width: 250px;
         height: 50px;
         background-color: #f32;
+      }
+      .address {
+        display: flex;
+        height: 16px;
+        line-height: 16px; 
+        float: left;
+        margin: {
+          top: 33px;
+        }
+        > li {
+          padding: 0 15px;
+          &:not(:last-child) {
+            border-right: 1px solid #888;
+          }
+        } 
+        a {
+          color: #888;
+          font-size: 12px;
+        }
+      }
+      .icon-mobile {
+        display: block;
+        width: 217px;
+        height: 28px;
+        float: right;
+        margin: {
+          left: 10px;
+          top: 25px;
+        }
+        background-color: #723;
       }
     }
   }
