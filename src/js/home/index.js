@@ -5,7 +5,7 @@
     const navSecondList = $('.nav-second').find('>li');
     navFirstList.each(function(index, item) {
       item = $(item);
-      if (item.hasClass('active')) return;
+      if (item.hasClass('home-nav')) return;
       item.hover(function() {
         $(this).find('.nav-second').show();
       }, function() {
