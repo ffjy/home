@@ -74,6 +74,9 @@
 
       &:hover {
         background-color: #fff;
+        .icon-right {
+          background-image: url("../../img/home/jiant02.png");
+        }
       }
       a {
         color: #919191;
@@ -90,9 +93,11 @@
         }
       }
       .icon-right {
-        width: 10px;
-        height: 20px;
-        background-color: red;
+        width: 6px;
+        height: 10px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-image: url("../../img/home/jiant01.png");
       }
     }
   }
