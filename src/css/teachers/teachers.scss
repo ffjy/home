@@ -1,0 +1,126 @@
+.page {
+  width: 100%;
+  height: 120px;
+  background-color: #b1b1b1;
+}
+
+.frontCover {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  background-color: #eeeeee;
+  z-index: 1;
+
+  .shade {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #010B16;
+    opacity: .8;
+    z-index: 2;
+}
+
+  >.frontCover-title {
+    position: relative;
+    font-family: NfOSWJ,sOS;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 999;
+
+    > p {
+      font-size: 80px;
+      line-height: 400px;
+      color: #ffffff;
+      text-align: center;
+      margin: 0;
+  }
+}
+}
+
+
+.main {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+
+  .centre {
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 86px;
+    box-sizing: border-box;
+
+    .teacher {
+      width: 590px;
+      height: 360px;
+      display: flex;
+      margin-bottom: 58px;
+      background-color: #ffffff;
+
+      &:nth-child(odd) {
+        margin-right: 19px;
+      }
+
+      &:hover {
+        box-shadow: 0 10px 24px 0 rgba(213,213,213,0.53);
+      }
+
+      .teacher-img {
+        width: 266px;
+        height: 360px;
+        border: none;
+        background-color: yellow;
+
+        >img {
+          width: 100%;
+          height:100%;
+        }
+      }
+
+      .teacher-introduce {
+        width: 324px;
+        height: 100%;
+        padding-left: 40px;
+        box-sizing: border-box;
+
+        .teacher-name {
+          color: #282727;
+          font-size: 40px;
+          line-height: 56px;
+
+           >p {
+             margin-top: 27px!important;
+             margin-bottom: 27px!important;
+           }
+        }
+
+        .content {
+          width: 240px;
+          height: 112px;
+          font-size: 20px;
+          line-height: 28px;
+          color: #2C2C2C;
+
+          >p {
+            width: 100%;
+            word-break:break-all;
+            display:-webkit-box;
+            -webkit-line-clamp:7;
+            -webkit-box-orient:vertical;
+            overflow:hidden;
+          }
+        }
+      }
+
+    }
+
+
+  }
+}
