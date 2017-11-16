@@ -50,7 +50,6 @@
 
   .centre {
     width: 1200px;
-    height: 500px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -72,55 +71,69 @@
         box-shadow: 0 10px 24px 0 rgba(213,213,213,0.53);
       }
 
-      .teacher-img {
-        width: 266px;
-        height: 360px;
-        border: none;
-        background-color: yellow;
+      >a {
+        display: flex;
+        text-decoration:none;
 
-        >img {
-          width: 100%;
-          height:100%;
-        }
-      }
+        .teacher-img {
+          width: 266px;
+          height: 360px;
+          border: none;
+          background-color: yellow;
 
-      .teacher-introduce {
-        width: 324px;
-        height: 100%;
-        padding-left: 40px;
-        box-sizing: border-box;
-
-        .teacher-name {
-          color: #282727;
-          font-size: 40px;
-          line-height: 56px;
-
-           >p {
-             margin-top: 27px!important;
-             margin-bottom: 27px!important;
-           }
-        }
-
-        .content {
-          width: 240px;
-          height: 112px;
-          font-size: 20px;
-          line-height: 28px;
-          color: #2C2C2C;
-
-          >p {
+          >img {
             width: 100%;
-            word-break:break-all;
-            display:-webkit-box;
-            -webkit-line-clamp:7;
-            -webkit-box-orient:vertical;
-            overflow:hidden;
+            height:100%;
+          }
+        }
+
+        .teacher-introduce {
+          width: 324px;
+          height: 100%;
+          padding-left: 40px;
+          box-sizing: border-box;
+
+          .teacher-name {
+            color: #282727;
+            font-size: 40px;
+            line-height: 56px;
+
+            >p {
+              margin-top: 27px!important;
+              margin-bottom: 27px!important;
+            }
+          }
+
+          .content {
+            width: 240px;
+            height: 112px;
+            font-size: 20px;
+            line-height: 28px;
+            color: #2C2C2C;
+
+            >p {
+              width: 100%;
+              word-break:break-all;
+              display:-webkit-box;
+              -webkit-line-clamp:7;
+              -webkit-box-orient:vertical;
+              overflow:hidden;
+            }
           }
         }
       }
+
+
 
     }
 
 
   }
+}
+
+
+.bottom {
+  width: 100%;
+  height: 230px;
+  background-color: #282828;
 }
