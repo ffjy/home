@@ -1,0 +1,33 @@
+@import '../common';
+.page {
+  width: 100%;
+  height: 120px;
+  background-color: #b1b1b1;
+}
+
+.title {
+  width: 100%;
+
+  >div {
+    width: 1200px;
+    margin: 30px auto;
+
+    >p {
+      text-align: center;
+      font-size: 34px;
+      margin: 0;
+    }
+  }
+}
+
+.main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  .centre {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #b1b1b1;
+  }
+}
