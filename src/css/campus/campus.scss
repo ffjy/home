@@ -8,36 +8,9 @@
   position: relative;
   width: 100%;
   height: 360px;
-  background-color: #eeeeee;
+  background-image: url("../../img/campus/frontCover.png");
+  background-size: 100% 100%;
   z-index: 1;
-
-  .shade {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: #010B16;
-    opacity: .8;
-    z-index: 2;
-  }
-
-  >.frontCover-title {
-    position: relative;
-    font-family: NfOSWJ,sOS;
-    width: 1200px;
-    height: 100%;
-    margin: 0 auto;
-    z-index: 999;
-
-    >p {
-      font-size: 80px;
-      line-height: 400px;
-      color: #ffffff;
-      text-align: center;
-      margin: 0;
-    }
-  }
 }
 
 .main {
