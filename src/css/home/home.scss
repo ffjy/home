@@ -219,18 +219,6 @@ html, body, .page {
                     display: block;
                   }
                 }
-
-                .imgTop-first {
-                  background-image: url("../../img/banner_bg01.png");
-                }
-
-                .imgTop-second {
-                  background-image: url("../../img/banner_bg02.png");
-                }
-
-                .imgTop-third {
-                  background-image: url("../../img/banner_bg03.png");
-                }
               }
             }
 
@@ -440,7 +428,6 @@ html, body, .page {
           box-sizing: border-box;
           background-color: rgba(255, 225, 0, .9);
           padding: 10px 20px;
-          overflow: hidden;
           .p-content {
             width: 100%;
             color: #2C2C2C;
