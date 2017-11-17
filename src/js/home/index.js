@@ -5,7 +5,7 @@
     const navSecondList = $('.nav-second').find('>li');
     navFirstList.each(function(index, item) {
       item = $(item);
-      if (item.hasClass('active')) return;
+      if (item.hasClass('home-nav')) return;
       item.hover(function() {
         $(this).find('.nav-second').show();
       }, function() {
@@ -71,6 +71,25 @@
       });
     });
 
+    $(function () {
+      var new_scroll_position = 0;
+      var last_scroll_position;
+      var dock = document.getElementById("dock");
+
+      window.addEventListener('scroll', function(e) {
+        last_scroll_position = window.scrollY;
+        console.log(window.scrollY)
+
+        //底部预约栏根据网页高度而变换是否显示
+        if ( 4200 > last_scroll_position && last_scroll_position > 0 ) {
+          dock.classList.add("dockVisible");
+        } else  {
+          dock.classList.remove("dockVisible");
+        }
+
+        new_scroll_position = last_scroll_position;
+      });
+    })
   });
 
 })(jQuery);
