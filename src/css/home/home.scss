@@ -524,79 +524,150 @@ html, body, .page {
     }
   }
   .intro  {
+    > .title {
+      width: 325px;
+      height: 77px;
+      background: url("../../img/home/why-select.png") no-repeat;
+      background-size: 100% 100%;
+      margin: 30px auto 0;
+    }
     .campusIntroduction {
+      width: 1200px;
+      margin: 0 auto;
+  
       > li {
         display: flex;
-        height: 460px;
-        margin: 94px auto;
+        height: 320px;
+        margin: 120px auto;
+        &:first-child {
+          margin-top: 40px;
+        }
         list-style-type: none;
   
         .campusImg {
-          width: 700px;
+          width: 480px;
           height: 100%;
+          overflow: hidden;
           background-color: #d8d8d8;
   
           > img {
             width: 100%;
             height: 100%;
+            transition: all .8s;
+          }
+  
+          &:hover {
+  
+            > img  {
+              transform: scale(1.4);
+            }
           }
         }
   
         .interval {
           order: 2;
-          width: 70px;
+          width: 90px;
           height: 100%;
         }
   
         .briefIntroduction {
           position: relative;
-          width: 430px;
+          width: 630px;
           height: 100%;
   
           .title {
             font-size: 46px;
-            color: #282627;
+            color: #282727;
+            line-height: 65px;
             box-sizing: border-box;
-            margin-bottom: 107px;
+            margin-bottom: 25px;
             text-align: left;
           }
   
           .content {
+            width: 100%;
             font-size: 20px;
+            line-height: 30px;
             color: #696969;
+            box-sizing: border-box;
             text-align: left;
           }
   
           .btn {
             position: absolute;
-            width: 80px;
-            height: 80px;
-            background-color: #fde200;
+            width: 70px;
+            height: 70px;
             bottom: 0;
-            right: 0;
+            opacity: 0;
+            transition: .6s;
+  
+            >a {
+              >i {
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-size: 100% 100%;
+                transition: all .3s;
+              }
+            }
           }
         }
-      }
   
-      > li:nth-child(odd) {
-        .campusImg {
-          order: 1;
+        &:nth-child(odd) {
+          .campusImg {
+            order: 1;
+          }
+  
+          .briefIntroduction {
+            order: 3;
+  
+            .content {
+              padding-right: 80px;
+            }
+  
+            .btn {
+              right: 0;
+  
+              >a {
+                >i {
+                  background-image: url("../../img/campus/right.png");
+                }
+              }
+            }
+          }
         }
   
-        .briefIntroduction {
-          order: 3;
-        }
-      }
+        &:nth-child(even) {
+          .campusImg {
+            order: 3;
+          }
   
-      > li:nth-child(even) {
-        .campusImg {
-          order: 3;
+          .briefIntroduction {
+            order: 1;
+  
+            .content {
+              padding-left: 80px;
+            }
+  
+            .btn {
+              left: 0;
+  
+              >a {
+                >i {
+                  background-image: url("../../img/campus/left.png");
+                }
+              }
+            }
+          }
         }
   
-        .briefIntroduction {
-          order: 1;
+        &:hover {
+          .briefIntroduction {
+            .btn {
+              opacity: 1;
+            }
+          }
         }
-  
       }
     }
   }  
